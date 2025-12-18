@@ -70,6 +70,7 @@
 2. **Component properties** — `manage_gameobject modify` has limited property support. Use `SerializedObject` in Editor scripts.
 3. **Position/Rotation** — use array format `[x, y, z]`, not dict `{x:, y:, z:}`
 4. **Timeout after domain reload** — wait for scripts to compile before calling menu items
+5. **Scene creation path** — do NOT include `.unity` extension in path. Use `Assets/Scenes/MyScene` (correct) NOT `Assets/Scenes/MyScene.unity` (creates folder instead of file)
 
 ### Movement Tuning
 1. **Default speed must match level scale**:
