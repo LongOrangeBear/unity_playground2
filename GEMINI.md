@@ -1,6 +1,32 @@
 # Gemini CLI — Unity Workflow
 
-> **Core Rules**: See [AGENTS.md](file:///home/meow/work/unity/test3/AGENTS.md) — this is the authoritative ruleset.
+> **Core Rules**: See [AGENTS.md](file:///home/meow/work/unity/test1/AGENTS.md) — this is the authoritative ruleset.
+
+---
+
+## ⚠️ MANDATORY: Before Any Unity Operation
+
+**READ AGENTS.md FIRST** — specifically these sections:
+1. `## ⛔ Non-Negotiables` — rules that MUST be followed
+2. `### MCP Tool Limitations` — known gotchas with MCP tools
+3. `### Scene Creation Checklist` — required steps for new scenes
+
+**Do NOT rely on memory** — always check the current rules before:
+- Creating/loading scenes
+- Creating GameObjects or Prefabs
+- Modifying components via MCP
+- Any operation that touches Unity assets
+
+---
+
+## MCP Quick Reference (Common Gotchas)
+
+| Operation | Correct | Wrong |
+|-----------|---------|-------|
+| Scene create path | `path="Assets/Scenes"` | `path="Assets/Scenes/MyScene.unity"` |
+| Position/Rotation | `[x, y, z]` array | `{x:, y:, z:}` dict |
+| Scene load | Use `build_index` or both `name`+`path` | Just `path` alone |
+| New scene | Add Camera + AudioListener | Empty scene (no camera!) |
 
 ---
 
@@ -89,6 +115,6 @@ Assets/
 
 ## References
 
-- [AGENTS.md](file:///home/meow/work/unity/test3/AGENTS.md) — Operating rules (non-negotiables, checklists)
-- [CLAUDE.md](file:///home/meow/work/unity/test3/CLAUDE.md) — Claude-specific workflow
-- [Assets/Plans/PromptTemplates.md](file:///home/meow/work/unity/test3/Assets/Plans/PromptTemplates.md) — Reusable prompts
+- [AGENTS.md](file:///home/meow/work/unity/test1/AGENTS.md) — Operating rules (non-negotiables, checklists)
+- [CLAUDE.md](file:///home/meow/work/unity/test1/CLAUDE.md) — Claude-specific workflow
+- [Assets/Plans/PromptTemplates.md](file:///home/meow/work/unity/test1/Assets/Plans/PromptTemplates.md) — Reusable prompts
